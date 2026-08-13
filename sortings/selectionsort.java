@@ -1,0 +1,41 @@
+/*Given an array of integers nums, sort the array in non-decreasing order using the selection sort algorithm and return the sorted array.
+A sorted array in non-decreasing order is an array where each element is greater than or equal to all previous elements in the array.
+Example 1
+Input: nums = [7, 4, 1, 5, 3]
+Output: [1, 3, 4, 5, 7]
+
+Explanation: 1 <= 3 <= 4 <= 5 <= 7.
+
+Thus the array is sorted in non-decreasing order.
+
+Example 2
+
+Input: nums = [5, 4, 4, 1, 1]
+
+Output: [1, 1, 4, 4, 5]
+
+Explanation: 1 <= 1 <= 4 <= 4 <= 5.
+
+Thus the array is sorted in non-decreasing order. */
+import java.util.*;
+public class selectionsort{
+    public static void main(String args[]){
+        int min_index = 0;
+        int a[] = {1,5,4,6,7};
+        int n = a.length;
+        for(int i=0;i<n;i++){
+            min_index = i;
+            for(int j=i+1;j<n;j++){
+                if(a[min_index]>a[j]){
+                    min_index  = j;
+                }
+            }
+            //swap :
+            int temp = a[i];
+            a[i]=a[min_index];
+            a[min_index]=temp;
+        }
+        System.out.println(Arrays.toString(a)); //util lo unntadi annta
+    }
+}
+//time : 

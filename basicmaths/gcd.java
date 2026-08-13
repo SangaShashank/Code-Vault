@@ -30,6 +30,8 @@ class gcd{
         Scanner s = new Scanner(System.in);
         int n1= s.nextInt();
         int n2 = s.nextInt();
+        approch_2(n1,n2);
+        approch_3(n1,n2);
         int ans = 1;
         for(int i=2;i<=Math.min(n1,n2);i++){
             if((n1%i==0) && (n2%i==0)){
@@ -39,4 +41,30 @@ class gcd{
         }
         System.out.println(ans);
 
-    }}
+    }
+public static void approch_2(int n1,int n2){
+    for(int i=Math.min(n1,n2);i>=1;i--){
+        if(n1%i == 0 && n2%i == 0){
+            System.out.println(i);
+            break;
+        }
+    }
+}
+public static void approch_3(int a,int b){
+    while (a>=0 && b >=0){
+        if (a==0){
+            System.out.println(b);
+            break;
+        }
+        else if(b==0){
+        System.out.println(a);
+        break;}
+        else if(a>b){
+            a = a%b;
+        }
+        else if(b>a){
+            b = b%a ;
+        }
+    }
+}
+}

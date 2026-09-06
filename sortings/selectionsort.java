@@ -38,4 +38,4 @@ public class selectionsort{
         System.out.println(Arrays.toString(a)); //util lo unntadi annta
     }
 }
-//time : 
+//https://claude.ai/share/f0c2fae6-ef09-4db6-bc80-d8eec1338e8a

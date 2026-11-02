@@ -40,3 +40,5 @@ public class search_insert_pos{
             return low; // the heart of the problem 
     }
 }
+//https://claude.ai/share/0e375aca-e610-4a8e-83bf-c5eb9f4ef8bb 
+//dsa 11

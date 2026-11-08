@@ -94,4 +94,3 @@ public class First_and_last_occurrence{
         return result;
     }
 }
-}

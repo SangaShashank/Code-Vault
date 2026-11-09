@@ -41,7 +41,7 @@ public class Job_Sequencing_Problem{
             for(int j=0;j<3;j++) arr[i][j] = s.nextInt();
         }
         System.out.print(app1(arr));
-        System.out.print(app2(arr));
+       // System.out.print(app2(arr));
     }
    /* my attempts :
     public static int app1(int arr[][]){
@@ -109,3 +109,43 @@ for (int x []:arr){
 return val;
 }
 }*/
+// striver solution :
+    // Approach 1: Greedy + Sorting
+    // Time: O(n log n + n * maxDeadline)
+    // Space: O(maxDeadline)
+    public static int[] app1(int arr[][]) {
+
+        int n = arr.length;
+
+        // Sort jobs according to profit (descending)
+        Arrays.sort(arr, (a, b) -> b[2] - a[2]); // idhi alavatu chesukovali 
+
+        int totProfit = 0;
+        int cnt = 0;
+        int maxDeadline = -1;
+
+        // Find maximum deadline
+        for(int i = 0; i < n; i++) {
+            maxDeadline = Math.max(maxDeadline, arr[i][1]); // max no of days kosam kavali
+        }
+
+        // -1 means slot is free
+        int hash[] = new int[maxDeadline + 1]; // plus one enduku anntey to manage zero based index , array 0 nunchi start ayina , we conisider days form 1 enduku anntey day 0 unndadu kabatti 
+
+        Arrays.fill(hash, -1); // kali slots
+
+        // Schedule jobs
+        for(int i = 0; i < n; i++) {
+            // Find latest available slot
+            for(int j = arr[i][1]; j >= 1; j--) { //start ee deadline unna riju nunchi chesaru 
+                if(hash[j] == -1) {
+                    cnt++;
+                    hash[j] = arr[i][0];
+                    totProfit += arr[i][2];
+                    break;
+                }
+            }
+        }
+        return new int[]{cnt, totProfit};
+    }
+}

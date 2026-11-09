@@ -149,3 +149,4 @@ return val;
         return new int[]{cnt, totProfit};
     }
 }
+//https://claude.ai/share/e78d01ea-2de9-41b8-8472-432bb4337cd9

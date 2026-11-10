@@ -53,31 +53,32 @@ public class leaders_in_a_array {
     }
     public static ArrayList<Integer> app1(int arr[]){
         ArrayList<Integer> res = new ArrayList<>();
-        for(int i=0;i<arr.length-1;i++){
+        for(int i=0;i<arr.length;i++){ // last varaku check cheayali 
             if(can_leader(arr,i)){
-                System.out.println(res + " " +i);
+                //System.out.println(res + " " +i);
                 res.add(arr[i]);
             }
         }
-        res.add(arr[arr.length-1]);
         return res;
     }
     public static boolean can_leader(int arr[],int i){
         for (int j = i+1;j<arr.length;j++){
-            if(arr[j]>arr[i]) return false;
+            if(arr[j]>=arr[i]) return false;
         }
         return true;
     }
     public static ArrayList<Integer> brinda(int arr[]){
         ArrayList<Integer> res = new ArrayList<>();
         int max = arr[arr.length-1];
+        res.add(max);
         for(int j=arr.length-2;j>=0;j--){
             if(arr[j]>max){
                 max = arr[j];
                 res.add(max);
             }
         }
-        res.add(arr[arr.length-1]);
+        Collections.reverse(res);
         return res;
 }
 }
+//https://claude.ai/share/cf1e05b5-824c-4c74-b27d-8e1c4797ec62

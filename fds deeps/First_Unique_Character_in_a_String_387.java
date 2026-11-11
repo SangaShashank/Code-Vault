@@ -92,7 +92,7 @@ class fds17
 //idhi na code 
 // and we can do by freq array aslo 
 import java.util.*;
-class fds17{
+public class First_Unique_Character_in_a_String_387({
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 = s.nextLine();
@@ -110,3 +110,9 @@ class fds17{
         System.out.println("-1");
     }
 }
+/*int[] f = new int[26];
+for (char c : s.toCharArray()) f[c - 'a']++;
+for (int i = 0; i < s.length(); i++)
+    if (f[s.charAt(i) - 'a'] == 1) return i;
+return -1; */
+//https://claude.ai/share/9ed98af4-9146-482d-833a-72436ce657b9

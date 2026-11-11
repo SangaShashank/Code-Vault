@@ -59,7 +59,6 @@ class fds1{
 }
 */
 import java.util.*;
-
 class Reverse_Array_In_Groups {
     public static void main(String args[]) {
 

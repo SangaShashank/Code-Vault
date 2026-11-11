@@ -13,7 +13,8 @@ Output: 5
 Explanation: The subsequence 36, 35, 33, 34, 32 is the longest
 
 Concept: Hashing / HashSet — O(n) approach
-*/import java.util.*;
+*/
+import java.util.*;
 public class Longest_Consecutive_Sequence_128{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
@@ -40,3 +41,29 @@ public class Longest_Consecutive_Sequence_128{
         System.out.print(l.get(0));
     }
     }
+//approch 2:
+/*public static int app2(int arr[]) {
+
+        Arrays.sort(arr);
+
+        int longest = 1;
+        int c = 1;
+
+        for(int i = 1; i < arr.length; i++) {
+
+            if(arr[i] == arr[i-1]) {
+                continue;
+            }
+
+            if(arr[i] == arr[i-1] + 1) {
+                c++;
+            }
+            else {
+                c = 1;
+            }
+
+            longest = Math.max(longest, c);
+        }
+
+        return arr.length == 0 ? 0 : longest; //idhi show kosam 
+    } */    

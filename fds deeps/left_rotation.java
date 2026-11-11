@@ -1,4 +1,4 @@
-/* right rotation by k steps */
+/* left rotation by k steps */
 // m - 1 : 
 import java.util.*;
 class left_rotation{
@@ -12,19 +12,17 @@ class left_rotation{
     }
     public static void main(String args[]){
         int a [] = {1,2,3,4,5,6};
-        int k = 2;
-        // super imp : if k > n then use k = k % n 
+        int k = 5;
         int n = a.length; // PAKKA length ee undali not n-1
+        if(k>n) k = k%n;
         // s1 : revere complete 
         reverse(a,0,n-1);
         System.out.print(Arrays.toString(a));
-        //s2: reverse upto size%k 
-        // System.out.print(6%4);
-        int h = (k)%n;
-        reverse(a,0,h);
+        int  h = n-k;
+        reverse(a,0,h-1);
         System.out.print(Arrays.toString(a));
         //s3 : reverse remanining elements :
-        reverse(a,h+1,n-1);
+        reverse(a,h,n-1);
         System.out.print(Arrays.toString(a));
     }
 }
@@ -40,10 +38,11 @@ class RotateArray {
         int[] result = new int[n];
 
         for (int i = 0; i < n; i++) {
-            result[(i + k) % n] = arr[i];
+            result[i] = arr[(i+k)%n];
         }
 
         System.out.println(Arrays.toString(result));
     }
 }
  */
+//https://claude.ai/share/809403b9-17aa-4c58-b41e-a79c02f6579a

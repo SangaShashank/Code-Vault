@@ -68,7 +68,7 @@ class fds15
 // lets do by freq array
 // idhi nenu chesina 
 import java.util.*;
-class fds15{
+public class Valid_Anagram_Application_242{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 = s.nextLine();
@@ -80,7 +80,7 @@ class fds15{
         for(char c : s2.toCharArray()) freq[c-'a']--;
         for (int i=0;i<freq.length;i++){
             if(freq[i]!=0){
-            System.out.println((char)(i+97));
+            System.out.println((char)(i+97)); // wow noiceee
             return ;
                 
             }

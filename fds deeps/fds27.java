@@ -1,9 +1,12 @@
 /*Playing with numbers is fun!!
-Given an array of integers and a number k, find the maximum sum among all contiguous subarrays whose sum is less than or equal to k. Return the maximum such sum possible.
+Given an array of integers and a number k
+, find the maximum sum among all contiguous subarrays whose sum is less than or equal to k.
+ Return the maximum such sum possible.
 
 Approach:
-Use a Variable Sliding Window. Expand right by adding elements to the current sum. When the sum exceeds k, shrink the window from the left. Track the maximum valid sum throughout the traversal.
-
+Use a Variable Sliding Window. 
+Expand right by adding elements to the current sum. When the sum exceeds k,
+ shrink the window from the left. Track the maximum valid sum throughout the traversal.
 Sample Input and Output 1:
 arr = [1, 2, 3, 4, 5]
 k   = 9
@@ -51,3 +54,13 @@ class fds27 {
         System.out.println(max);
     }
 }
+// koncham manchiga
+int sum = 0;
+int res = Integer.MIN_VALUE;
+int left = 0;
+for (int right = 0;right<n;right++){
+    sum += arr[right];
+    while(sum >k) sum -= arr[left]; left --;
+    res = Math.max(sum,res);
+}
+return res;

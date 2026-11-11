@@ -60,7 +60,7 @@ false
 //ali bhai apprach 
 import java.util.*;
 
-public class fds18{
+public class Word_Pattern_290_2{
     public static boolean A(String s, String t) {
         if (s.length() != t.length()) return false;
 

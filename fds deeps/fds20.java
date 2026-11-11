@@ -8,12 +8,9 @@ class fds20{
         int i = 0;
         int l = 0,r = 0,maxlen = 0;
         while (r<k.length()){ //r munduku potunndi ga 
-            while(h.contains(k.charAt(r))){  // to remove all dublicates while
+            while(h.contains(k.charAt(r))){  // to remove all elements before it , while vadutunnam 
                 h.remove(k.charAt(l));
                 l++;
-                
-
-}
             if(!h.contains(k.charAt(r))){;
                 h.add(k.charAt(r));
                 if(r-l+1>maxlen){
@@ -22,11 +19,9 @@ class fds20{
                 }
                 r++;
 }
-
-                
-
-}
+        }
 String k1 = k.substring(i,i+maxlen);
 System.out.println(k1);
 }}
+}
         

@@ -7,7 +7,7 @@ class fds19{
         //System.out.print(k[5]);
         int l=0,r=0;
         Set <String> s1 = new HashSet<>();
-        while(r<k.length){
+        while(r<k.length && l<k.length){
             if(s1.contains(k[r])){
                 l++;
             }
@@ -16,6 +16,6 @@ class fds19{
                 r++;
             }
         }
-        System.out.print(s1);
+        System.out.print(r);
     }
 }

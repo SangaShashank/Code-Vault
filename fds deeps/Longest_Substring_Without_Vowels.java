@@ -24,7 +24,7 @@
 // Concept: Variable Sliding Window — expand right, reset left on vowel hit
 //ali bhai 
 import java.util.*;
-class fds30
+public class Longest_Substring_Without_Vowels
 {
     public static void main(String args[])
     {
@@ -37,13 +37,13 @@ class fds30
             char ch=s.charAt(right);
             if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
             {
-                left=right+1;
-            }
+                left=right+1; // reset cheayali 
+            } 
             else
             {
-                maxLen=Math.max(maxLen,right-left+1);
+                maxLen=Math.max(maxLen,right-left+1); // tracking max length 
             }
-            
+            // else pettakapothey inka machidhi
             
         }
         System.out.println(maxLen);

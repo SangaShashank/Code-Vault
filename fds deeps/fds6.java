@@ -14,9 +14,9 @@ class fds6{
         int a [] = {1,2,3,4,5,6};
         int k = 4;
         // super imp : if k > n then use k = k % n 
-        int n = a.length - 1;
+        int n = a.length; // PAKKA length ee undali not n-1
         // s1 : revere complete 
-        reverse(a,0,n);
+        reverse(a,0,n-1);
         System.out.print(Arrays.toString(a));
         //s2: reverse upto size%k 
         // System.out.print(6%4);

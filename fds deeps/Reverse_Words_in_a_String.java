@@ -16,7 +16,7 @@ Constraints:
 
 Remove leading/trailing spaces
 Reduce multiple spaces between words to single space*/
-public class fds3 {
+/*public class fds3 {
         public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String a = s.nextLine();
@@ -31,6 +31,26 @@ public class fds3 {
             j--;
         }
         System.out.print(Arrays.toString(a2));
+    }
+}
+*/
+import java.util.*;
+
+public class Reverse_Words_in_a_String {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        String a = s.nextLine();
+        String[] a2 = a.trim().split("\\s+");   // trim first
+        int i = 0, j = a2.length - 1;
+        // two pointers vadudam :
+        while (i < j) {
+            String temp = a2[i];
+            a2[i] = a2[j];
+            a2[j] = temp;
+            i++;
+            j--;
+        }
+        System.out.print(String.join(" ", a2)); // join with single space
     }
 }
 

@@ -80,7 +80,7 @@ class sol{
 }*/
 //using two pointer approach
 import java.util.*;
-class moveZeroes_to_end{
+class Zeroes_to_end{
     
     public static void main(String arags[]){
         Scanner s = new Scanner(System.in);

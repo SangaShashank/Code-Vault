@@ -29,7 +29,7 @@
 
 // Concept: Conditional Logic (nested if-elif-else) with arithmetic
 import java.util.*;
-public class fds29{
+public class chillar_if_Else{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

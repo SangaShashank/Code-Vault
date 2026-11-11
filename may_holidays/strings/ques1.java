@@ -1,4 +1,5 @@
-/* Write a function to reverse the words in a sentence without reversing characters inside each word.
+/* Write a function to reverse the words in a sentence without
+ reversing characters inside each word.
 Example:
 Input:  "the sky is blue"
 Output: "blue is sky the"

@@ -20,7 +20,7 @@ Constraints:
 1 <= s.length, goal.length <= 100
 s and goal consist of lowercase English letters */
 import java.util.*;
-class fds8{
+class rotate_array_796{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String k = s.next();
@@ -40,3 +40,8 @@ class fds8{
         }
     }
 }
+// koncham smart ga rayali anntey :(claude)
+/*public boolean rotateString(String s, String goal) {
+    return s.length() == goal.length() && (s + s).contains(goal);
+}*/
+//https://claude.ai/share/6fc7a698-fa55-49d7-b0a6-84d41edd9b61

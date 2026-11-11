@@ -111,7 +111,7 @@ class fds16
 }*/
  // my appraoch 
  import java.util.*;
-class fds16{
+public class Contains_Duplicate_217{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 [] = s.nextLine().split(",");
@@ -150,5 +150,17 @@ class fds16 {
             seen.add(num);
         }
         System.out.println("false"); // no duplicates
+    }
+} */
+/* // sort and adjacent check
+        Arrays.sort(arr);
+
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] == arr[i + 1]) {      // equal values are adjacent after sorting
+                System.out.println("true");
+                return;
+            }
+        }
+        System.out.println("false");
     }
 } */

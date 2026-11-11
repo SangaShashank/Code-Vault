@@ -37,11 +37,11 @@ output=false
 
 import java.util.*;
 
-public class fds14 {
+public class Valid_Anagram_242{
     public static void anacheck(String s1,String t){
         s1 = s1.toLowerCase();
         t = t.toLowerCase();
-        if(s1.length()!= t.length()){
+        if(s1.length()!= t.length()){ // ofc 
             System.out.print(false);
             return;
         }
@@ -65,6 +65,7 @@ public class fds14 {
                 return ; 
             }
         }
+        System.out.print(true);
     }
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
@@ -73,4 +74,17 @@ public class fds14 {
         anacheck(s1,t);
     }
 }
-// other codes deepa 1
+// optimal : telsu ga freq array unntadi ani (heart : c - 'a' gives value in int )
+/*if (s.length() != t.length()) { System.out.println(false); return; }
+int[] cnt = new int[26];
+for (int i = 0; i < s.length(); i++) {
+    cnt[s.charAt(i) - 'a']++;
+    cnt[t.charAt(i) - 'a']--;
+}
+for (int c : cnt) if (c != 0) { System.out.println(false); return; }
+System.out.println(true);*/
+
+//brute:
+/*char[] a = s.toCharArray(), b = t.toCharArray();
+Arrays.sort(a); Arrays.sort(b);
+System.out.println(Arrays.equals(a, b)); */

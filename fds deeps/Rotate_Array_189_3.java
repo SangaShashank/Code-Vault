@@ -25,7 +25,7 @@ Explanation: Rotating by array length brings it back to original
 */
 import java.util.*;
 
-class fds7 {
+public class Rotate_Array_189_3 {
     public static void main(String[] args) {
 
         String[] songs = {"Pop", "Rock", "Jazz", "Blues", "Country"};

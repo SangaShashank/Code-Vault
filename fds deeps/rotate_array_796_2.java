@@ -51,7 +51,7 @@ Password length: 1 to 100 characters
 Passwords contain only lowercase English letters
 Both passwords must be same length to be valid rotations */
 import java.util.*;
-class fds9
+class rotate_array_796_2
 
 {
 

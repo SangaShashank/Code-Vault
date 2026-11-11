@@ -23,7 +23,7 @@ The positive number 1, 2, 3 maintain their relative positions and -1, -3, -4 mai
 
 import java.util.Arrays;
 import java.util.Scanner;
-public class Rearrange_Array_Elements_by_Sign{
+public class Rearrange_by_Sign{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();

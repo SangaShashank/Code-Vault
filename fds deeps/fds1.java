@@ -60,7 +60,7 @@ class fds1{
 */
 import java.util.*;
 
-class fds1 {
+class Reverse_Array_In_Groups {
     public static void main(String args[]) {
 
         int[] a = {4, 5, 6, 7, 8, 9, 10, 11};

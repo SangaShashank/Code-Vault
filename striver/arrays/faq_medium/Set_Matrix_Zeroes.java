@@ -21,26 +21,68 @@ There are two zeroes: (0,0) and (0,3).
 
 Row 0 → all elements become 0
 Column 0 and column 3 → all elements become 0 */
-// pasting form striver sheet
-class Solution {
-    public void setZeroes(int[][] matrix) {
-       ArrayList<Integer> pos = new ArrayList<>(); 
-        // Your code goes here
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                if(matrix[i][j] == 0){
-                    // make rows zero 
-                    pos.add(i); pos.add(j);
-                    
+ 
+    import java.util.*;
+
+public class Set_Matrix_Zeroes {
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int m = s.nextInt();
+        int n = s.nextInt();
+
+        int matrix[][] = new int[m][n];
+
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                matrix[i][j] = s.nextInt();
+            }
+        }
+
+        app1(matrix);
+
+        System.out.println(Arrays.deepToString(matrix));
+    }
+
+    // Approach 1: Brute Force (Store zero positions)
+    // Time: O(m*n + z*(m+n))
+    // Space: O(z)
+    // z = number of original zeroes
+
+    public static void app1(int matrix[][]) {
+
+        ArrayList<Integer> pos = new ArrayList<>();
+
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[0].length; j++) {
+
+                if(matrix[i][j] == 0) {
+
+                    // Store row and column positions
+                    pos.add(i);
+                    pos.add(j);
                 }
             }
         }
-        zero_down(matrix,pos);
+
+        zero_down(matrix, pos);
     }
-        public static void zero_down(int [][] matrix,ArrayList<Integer> pos){
-            for(int i=0;i<pos.size();i = i+2){
-                for(int k = 0;k<matrix[0].length;k++) matrix [pos.get(i)][k] = 0;
-                    for(int k=0;k<matrix.length;k++) matrix [k][pos.get(i+1)] =0;
+
+    public static void zero_down(int matrix[][], ArrayList<Integer> pos) {
+
+        for(int i = 0; i < pos.size(); i = i + 2) {
+
+            // Make entire row zero
+            for(int k = 0; k < matrix[0].length; k++) {
+                matrix[pos.get(i)][k] = 0;
+            }
+
+            // Make entire column zero
+            for(int k = 0; k < matrix.length; k++) {
+                matrix[k][pos.get(i+1)] = 0;
             }
         }
     }
+}

@@ -74,7 +74,7 @@ class Reverse_Array_In_Groups {
         for (int i = 0; i < n; i += k) {
 
             int left = i;
-            int right = Math.min(i + k - 1, n - 1);
+            int right = Math.min(i + k - 1, n - 1); // heart of the problem 
 
             while (left < right) {
                 int temp = a[left];
@@ -88,7 +88,7 @@ class Reverse_Array_In_Groups {
         System.out.println(Arrays.toString(a));
     }
 }
-/* shreni :
+/* shreni : idhi  ikkada panu cheyadu
 public static void m1(int a1[],int a[],int k,int n){
         a1[0]=a[k];
         int i=k + 1;

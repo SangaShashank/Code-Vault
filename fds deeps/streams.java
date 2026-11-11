@@ -1,7 +1,7 @@
 //streams : it is a like pipe line which have 3 func -> source(stream()) , intermidiate(filter,map,find any,match any),stopping (collector,count,for each)
 import java.util.*;
 import java.util.function.Predicate; //predicates kosam
-class fds12{
+public class streams{
     public static void main(String args[] ){
         List<Integer> l = new ArrayList<>(Arrays.asList(10,20,30,40,50));
         List<String> l2 = new ArrayList<>(Arrays.asList("anil","sarath","zoe","mandira","akshara","anand"));

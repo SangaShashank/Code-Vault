@@ -1,7 +1,7 @@
 /* right rotation by k steps */
 // m - 1 : 
 import java.util.*;
-class fds6{
+public class right_rotation_189{
     public static void reverse(int a[],int s,int e){
         while(s<e){
             int temp = a[s];
@@ -12,19 +12,17 @@ class fds6{
     }
     public static void main(String args[]){
         int a [] = {1,2,3,4,5,6};
-        int k = 4;
+        int k = 2;
         // super imp : if k > n then use k = k % n 
-        int n = a.length; // PAKKA length ee undali not n-1
+        int n = a.length;
         // s1 : revere complete 
         reverse(a,0,n-1);
         System.out.print(Arrays.toString(a));
-        //s2: reverse upto size%k 
-        // System.out.print(6%4);
-        int h = n % k ;
-        reverse(a,0,h);
+        //s2: reverse upto k elements
+        reverse(a,0,k-1);
         System.out.print(Arrays.toString(a));
         //s3 : reverse remanining elements :
-        reverse(a,h+1,n);
+        reverse(a,k,n-1);
         System.out.print(Arrays.toString(a));
     }
 }

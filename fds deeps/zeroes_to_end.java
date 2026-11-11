@@ -100,9 +100,10 @@ class Zeroes_to_end{
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j]=temp;
-                i++; // 1st zero position munduku potunndi kada 
+                i++; // 1st zero position munduku potunndi kada (i eppudu 1st zero ke point chestunndi )
             }
             j++;
+            // i only swap ayithane increment, kani j ofc pratisari increment kavali kada 
             System.out.print(Arrays.toString(arr));
         }
     }
@@ -122,4 +123,6 @@ class Solution {
             nums[k++]=0;
         }
     }
+        // non zero find out chesi , positon lo insert chesi increment chesi wait chestunnam (method explanation)
+        
 }` */

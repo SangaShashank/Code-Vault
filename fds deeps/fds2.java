@@ -80,7 +80,8 @@ class sol{
 }*/
 //using two pointer approach
 import java.util.*;
-class fds2{
+class moveZeroes_to_end{
+    
     public static void main(String arags[]){
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
@@ -99,7 +100,7 @@ class fds2{
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j]=temp;
-                i++;
+                i++; // 1st zero position munduku potunndi kada 
             }
             j++;
             System.out.print(Arrays.toString(arr));

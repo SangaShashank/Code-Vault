@@ -23,7 +23,7 @@ public class ques4{
                 j++;
             }
             else{
-                arr[i+1] = arr[j];
+                arr[i+1] = arr[j]; //overwrite cheayli anthey 
                 i++; j++;
                 System.out.println("Arrat now :"+ Arrays.toString(arr));
 

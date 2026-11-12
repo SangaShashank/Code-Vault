@@ -22,7 +22,7 @@ public class Longest_Consecutive_Sequence_128{
         HashSet <Integer> h = new HashSet<>();
         ArrayList <Integer > l = new ArrayList<>();
         for (String i : s1){
-            h.add(Integer.parseInt(i));
+            h.add(Integer.parseInt(i)); // ee step nen revison lo marchipoyina 
         }
         //System.out.print(h);
         for (int i: h){

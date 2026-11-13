@@ -25,11 +25,32 @@ public class Count_Occurrences_in_a_Sorted_Array{
         int target = s.nextInt();
         System.out.print(app1(arr, target));
     }
-    public static int app1(int arr[], int target){
-        int low = 0, high = arr.length - 1;
-        while(low <= high ){
-            int mid = low + (high - low )/2;
-            if()
+    public static int app1(int arr[], int target) {
+        int first = findFirst(arr, target);
+        if (first == -1) return 0;          // target absent
+        int last = findLast(arr, target);   // guaranteed to exist now
+        return last - first + 1;
+    }
+
+    static int findFirst(int arr[], int target) {
+        int low = 0, high = arr.length - 1, ans = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == target) { ans = mid; high = mid - 1; } // save, go LEFT
+            else if (arr[mid] < target) low = mid + 1;
+            else high = mid - 1;
         }
+        return ans;
+    }
+
+    static int findLast(int arr[], int target) {
+        int low = 0, high = arr.length - 1, ans = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == target) { ans = mid; low = mid + 1; }  // save, go RIGHT
+            else if (arr[mid] < target) low = mid + 1;
+            else high = mid - 1;
+        }
+        return ans;
     }
 }

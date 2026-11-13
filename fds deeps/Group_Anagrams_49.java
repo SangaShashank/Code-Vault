@@ -95,7 +95,7 @@ class fds23{
 }*/
 // logic : all anagrams will have same sorted order 
 import java.util.*;
-class fds23{
+public class Group_Anagrams_49{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 [] = s.nextLine().split(" ");
@@ -106,7 +106,7 @@ class fds23{
             String sor = new String(k); 
             if(m.containsKey(sor)){
                 m.get(sor).add(s1[i]);
-                m.put(sor,m.get(sor));
+                m.put(sor,m.get(sor)); // this line is useless 
             }
             else{
                 List <String> l = new ArrayList<>();
@@ -117,3 +117,66 @@ class fds23{
         System.out.print(m);
     }}
         
+// naa idea  ni chatgpt code chesindi 
+/* import java.util.*;
+
+class Group_Anagrams {
+
+    public static void main(String args[]) {
+
+        Scanner s = new Scanner(System.in);
+
+        String strs[] = s.nextLine().trim().split("\\s+");
+
+        int n = strs.length;
+
+        boolean visited[] = new boolean[n];
+
+        List<List<String>> res = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+
+            if (visited[i]) continue;
+
+            List<String> l = new ArrayList<>();
+
+            l.add(strs[i]);
+            visited[i] = true;
+
+            for (int j = i + 1; j < n; j++) {
+
+                if (!visited[j] && anaCheck(strs[i], strs[j])) {
+
+                    l.add(strs[j]);
+                    visited[j] = true;
+                }
+            }
+
+            res.add(l);
+        }
+
+        System.out.print(res);
+    }
+
+    public static boolean anaCheck(String s1, String s2) {
+
+        if (s1.length() != s2.length()) return false;
+
+        HashMap<Character, Integer> m = new HashMap<>();
+
+        for (char c : s1.toCharArray()) {
+            m.put(c, m.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c : s2.toCharArray()) {
+
+            if (!m.containsKey(c)) return false;
+
+            m.put(c, m.get(c) - 1);
+
+            if (m.get(c) < 0) return false;
+        }
+
+        return true;
+    }
+}*/

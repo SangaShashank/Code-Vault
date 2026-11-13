@@ -42,7 +42,7 @@ output:true
 
 */
 import java.util.*;
-class fds22{
+public class Ransom_Note_383{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String ran = s.nextLine();

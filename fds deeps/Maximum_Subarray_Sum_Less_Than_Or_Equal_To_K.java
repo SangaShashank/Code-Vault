@@ -30,7 +30,7 @@ Concept: Variable Sliding Window — expand right, shrink left when sum > k
 //jaya
 import java.util.*;
 
-class fds27 {
+public class Maximum_Subarray_Sum_Less_Than_Or_Equal_To_K{
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
@@ -58,9 +58,19 @@ class fds27 {
 int sum = 0;
 int res = Integer.MIN_VALUE;
 int left = 0;
-for (int right = 0;right<n;right++){
+
+for (int right = 0; right < n; right++) {
+
     sum += arr[right];
-    while(sum >k) sum -= arr[left]; left --;
-    res = Math.max(sum,res);
+
+    while (sum > k && left <= right) {
+        sum -= arr[left];
+        left++;
+    }
+
+    if (left <= right) {
+        res = Math.max(sum, res);
+    }
 }
+
 return res;

@@ -23,6 +23,8 @@ Sample Input:
 Sample Output:
 2 3 4
 */
+// it is a mistake annta 
+
 import java.util.*;
 public class Answer_Queries_with_Sum_of_Elements_2389{
     public static void main(String args[]){

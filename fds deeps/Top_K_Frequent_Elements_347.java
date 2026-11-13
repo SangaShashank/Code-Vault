@@ -46,7 +46,7 @@ class fds24{
 }*/
 // ai one:
 import java.util.*;
-class fds24{
+public class Top_K_Frequent_Elements_347{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 [] = s.nextLine().split(" ");

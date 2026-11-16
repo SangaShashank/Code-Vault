@@ -50,8 +50,8 @@ Constraints:
       boolean visited [] = new boolean[n];
       //System.out.print(visited[2]);
       for(int i=0;i<n;i++){
-        if(visited[i]!=true){
-          bfs(visited,graph,n,i);
+        if(visited[i]!=true){ // visited false unntey ney call cheyali 
+          bfs(visited,graph,n,i); // void enduku anntey manam visited okkati manuplate cheste chalu kada 
           count ++;
         }
       }
@@ -60,14 +60,14 @@ Constraints:
     public static void bfs(boolean [] visited,int graph[][],int n,int source){
       Queue<Integer> q = new LinkedList<>();
       q.add(source);
-      visited[source] = true;
+      visited[source] = true; // enque chesi viisted mark cheyali
       while(!q.isEmpty()){
         int u = q.poll();
-      // visited[u] = true;
+      // visited[u] = true; // dequeue appudu vaddu le 
         for(int v=0;v<n;v++){
           if(visited[v]!=true && graph[u][v]!=0){
             q.add(v);
-            visited[v] = true;
+            visited[v] = true;// enque appudu mark cheayli 
           }
         }
       }

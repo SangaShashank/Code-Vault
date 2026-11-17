@@ -77,11 +77,11 @@ public class flood_fill{
         int sc = s.nextInt();
         int new_pixel = s.nextInt();
         app1(arr,n,sr,sc,new_pixel);
-        System.out.println(Arrays.deepToString(arr));
+        System.out.println(Arrays.deepToString(arr)); //2d arrays kosam annta 
     }
     public static int[][] app1(int grid[][],int n,int sr,int sc , int new_pixel){
-        Queue<int []> q = new LinkedList<>(); 
-        int old_pixel = grid[sr][sc];
+        Queue<int []> q = new LinkedList<>();  
+        int old_pixel = grid[sr][sc]; // comparision tarvata kavali kada 
         q.add(new int[]{sr,sc});
         grid[sr][sc] = new_pixel; // enque tarvata visited
         int neighbours [][] = {{0,-1},{-1,0},{1,0},{0,1}};
@@ -92,7 +92,7 @@ public class flood_fill{
                 int j = current[1]+x[1];
                 if(i>=0 && j>=0 && i<grid.length &&  j<grid[0].length && grid[i][j]==old_pixel){
                     q.add(new int[]{i,j});
-                    grid[i][j] = new_pixel;
+                    grid[i][j] = new_pixel; // same enque tarvata visited 
                 }
             }
         }

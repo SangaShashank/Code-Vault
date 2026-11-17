@@ -133,3 +133,4 @@ static void dfs(List<List<Integer>> adj, boolean[] visited, int u) {
     for (int nb : adj.get(u))
         if (!visited[nb]) dfs(adj, visited, nb);
 } */
+//https://claude.ai/share/7f1266af-671e-49ee-b234-5cce1194cf92

@@ -9,7 +9,7 @@ Mark solved
 Explain solution ↗
 Follow-up: What if each element is allowed to appear at most twice? */
 import java.util.*;
-public class ques4{
+public class Remove_Duplicates_from_Sorted_Array_26{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 [] = s.nextLine().split(",")        ;

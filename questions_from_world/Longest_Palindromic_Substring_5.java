@@ -1,7 +1,7 @@
 //epoch 1:
 //ofc konni tappulu unnai 
-import java.util.*;
-/*public class Longest_Palindromic_Substring_5 {
+/*import java.util.*;
+public class Longest_Palindromic_Substring_5 {
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String st = s.nextLine();

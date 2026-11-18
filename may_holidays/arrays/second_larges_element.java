@@ -77,7 +77,7 @@ public class ques2{
     }}*/
 //epoch 3
 import java.util.*;
-public class ques2{
+public class second_larges_element{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String [] s1 = s.nextLine().split(",");
@@ -88,16 +88,17 @@ public class ques2{
         int max_1 = Integer.MIN_VALUE;
         int max_2= Integer.MIN_VALUE;
         for (int i=0;i<k.length;i++){
-            if (k[i]>max_1){
+            if (k[i]>max_1){ // vache element iddari kanna great ani artham 
                 max_2 = max_1;
                 max_1 = k[i];
             }
-            else if(k[i]>max_2 && k[i]!=max_1){
+            else if(k[i]>max_2 && k[i]!=max_1){ //max 2 kanna great kani max one kanna takkava , ekkava ayithe paina ney true ayedi kada 
+                                                // iinka equal kuda unndadu kada ofc 
                 max_2 = k[i];
             }
 
         }
-        if(max_2==Integer.MIN_VALUE){
+        if(max_2==Integer.MIN_VALUE){ 
             System.out.print("-1");
             return;
         }

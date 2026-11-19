@@ -54,13 +54,14 @@ public class MaxSubArray_53{
         int res = Integer.MIN_VALUE;
         for (int x : nums) {
             cur += x;
-            res = Math.max(res, cur);
+            res = Math.max(res, cur); // mundu res store cheayli pakka 
             if (cur < 0) cur = 0;
         }
         return res;
     }
 
     // Kadane's, equivalent DP form: extend or start fresh at nums[i].
+    //tapadia kuda cheppindu 
     static int kadaneDP(int[] nums) {
         int cur = nums[0];
         int res = nums[0];

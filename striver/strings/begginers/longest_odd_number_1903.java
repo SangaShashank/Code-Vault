@@ -41,3 +41,4 @@ public class longest_odd_number_1903{
         System.out.print(k.substring(i,j+1)); // inclusive kadu kada 
     }
 }
+//https://claude.ai/share/af57b2ea-3aa4-4d65-99f9-e697dd8dde96

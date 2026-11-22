@@ -86,3 +86,29 @@ public class insert_intervals_57{
         return res;
     }
 }
+//idhi naa idea:
+//stirver kanna nade bagunndi 
+public static List<int []> app1(int [][] interval, int [] new_interval){
+    List<int []> res = new ArrayList<>();
+    boolean added = false;                       // new_interval already add ayyindha?
+    int i = 0;
+    while(i < interval.length){
+        if(interval[i][1] < new_interval[0]){            // BEFORE: ends before new starts
+            res.add(interval[i]);
+        }
+        else if(interval[i][0] > new_interval[1]){       // AFTER: starts after new ends
+            if(!added){
+                res.add(new_interval);                   // place new_interval once, before the first "after" interval
+                added = true;
+            }
+            res.add(interval[i]);
+        }
+        else{                                            // OVERLAP: everything else
+            new_interval[0] = Math.min(new_interval[0], interval[i][0]);
+            new_interval[1] = Math.max(new_interval[1], interval[i][1]);
+        }
+        i++;
+    }
+    if(!added) res.add(new_interval);                    // new_interval is last, or all intervals overlapped
+    return res;
+}

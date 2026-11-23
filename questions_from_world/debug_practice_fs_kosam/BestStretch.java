@@ -1,15 +1,18 @@
 /*Question 1: Fresh Mart Profit
 Topic: Arrays · Hidden bugs: 2
 Fresh Mart records its profit for each day of a week (a negative number is a loss). 
-The owner wants the best run of consecutive days, meaning the stretch with the highest total profit, 
-and the day numbers where it starts and ends. Days are numbered from 1. The owner must pick at least one day, 
-even if every day was a loss.
+The owner wants the best run of consecutive days, 
+meaning the stretch with the highest total profit, 
+and the day numbers where it starts and ends.
+ Days are numbered from 1. The owner must pick at least one day, 
+even if every day was a loss.*/
 public class BestStretch {
     static int[] bestStretch(int[] profit) {
-        int best = 0, cur = 0;
+        int best = Integer.MIN_VALUE, cur =0; //fix 
         int start = 0, bestStart = 0, bestEnd = 0;
         for (int i = 0; i < profit.length; i++) {
             cur += profit[i];
+            System.out.println(i + " " + cur);
             if (cur > best) {
                 best = cur;
                 bestStart = start;
@@ -17,7 +20,7 @@ public class BestStretch {
             }
             if (cur < 0) {
                 cur = 0;
-                start = i;
+                start = i+1; // fix 
             }
         }
         return new int[]{best, bestStart, bestEnd};
@@ -33,7 +36,7 @@ public class BestStretch {
         System.out.println("Week 2 -> Best profit: " + r2[0] + " from Day " + (r2[1] + 1) + " to Day " + (r2[2] + 1));
     }
 }
-Expected output
+/*Expected output
 Week 1 -> Best profit: 12 from Day 3 to Day 6
 Week 2 -> Best profit: -1 from Day 2 to Day 2
 Actual output

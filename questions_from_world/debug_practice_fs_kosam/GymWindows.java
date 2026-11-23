@@ -36,14 +36,14 @@ Member B: 3*/
 //fixed 
 static int countWindows(int[] mins, int k) {
     Map<Integer, Integer> seen = new HashMap<>();
-    seen.put(0, 1);
+    seen.put(0, 1); //fix one
     int sum = 0, count = 0;
     for (int x : mins) {
         sum += x;
         if (seen.containsKey(sum - k)) {
             count += seen.get(sum - k);
         }
-        seen.put(sum, seen.getOrDefault(sum, 0) + 1);
+        seen.put(sum, seen.getOrDefault(sum, 0) + 1); // fix two 
     }
     return count;
 }

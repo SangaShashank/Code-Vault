@@ -1,45 +1,55 @@
-/*31. Sum of Subarray Minimums
-Given an array of integers arr of size n, 
-calculate the sum of the minimum value in each (contiguous) subarray of arr. 
-Since the result may be large, return the answer modulo 109 +7.
+/*194. Next Smaller Element
+Given an array of integers arr, your task is to find the Next Smaller Element (NSE) for every element in the array.
+
+The Next Smaller Element for an element x is defined as the first element to the right of x that is smaller than x.
+
+If there is no smaller element to the right, then the NSE is -1.
 
 Example 1:
-Input: arr = [3, 1, 2, 5]
+Input: arr = [4, 8, 5, 2, 25]
 
-Output: 18
+Output: [2, 5, 2, -1, -1]
 
-Explanation: The minimum of subarrays: [3], [1], [2], [5], [3, 1], [1, 2], [2, 5], [3, 1, 2], [1, 2, 5], [3, 1, 2, 5] are 3, 1, 2, 5, 1, 1, 2, 1, 1, 1 respectively and their sum is 18.
+Explanation:
+
+- For 4, the next smaller element is 2.
+
+- For 8, the next smaller element is 5.
+
+- For 5, the next smaller element is 2.
+
+- For 2, there is no smaller element to its right → -1.
+
+- For 25, no smaller element exists → -1.
 
 Example 2:
-Input: arr = [2, 3, 1]
+Input: arr = [10, 9, 8, 7]
 
-Output: 10
+Output: [9, 8, 7, -1]
 
-Explanation: The minimum of subarrays: [2], [3], [1], [2,3], [3,1], [2,3,1] are 2, 3, 1, 2, 1, 1 respectively and their sum is 10. */
+Explanation:
+
+Each element’s next right neighbor is smaller. */
 import java.util.*;
 public class s {
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int arr[] = new int[n];
-        for (int i=0;i<n;i++) arr[i ] = s.nextInt();
-        System.out.print(app1(arr,n));
+        int arr [] = new int [n];
+        for (int i=0;i<n;i++) arr[i] = s.nextInt();
+        System.out.print(Arrays.toString(app1(arr,n)));
     }
-    // brute ultra pro 
-    public static int app1(int arr[], int n ){
-        double  mod = Math.pow(10,9)+7;
-        int sum = 0;
-        for (int i=0;i<n;i++){
-            for (int j = i;j<n;j++){
-                int min = Integer.MAX_VALUE;
-                for (int k =i;k<=j;k++){
-                    min = Math.min(min,arr[k]);
-                }
-                System.out.println(" min now : " + min);
-                sum += min;
-                sum = sum % (int) mod; // question wants athi 
-            }
+    public static int [] app1(int arr[], int n){
+        Deque<Integer> st = new ArrayDeque<>();
+        for (int i = n-1;i>= 0;i--){
+            int curr = arr[i]; // pakka store cheayli 
+           while (!st.isEmpty() && st.peek()>= arr[i]){
+            st.pop();
+           }
+           if(st.isEmpty()) arr[i] = -1;
+           else arr[i] = st.peek();
+           st.push(curr);
         }
-        return sum ;
+        return arr;
     }
 }

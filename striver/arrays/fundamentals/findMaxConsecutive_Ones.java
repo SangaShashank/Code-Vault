@@ -19,7 +19,7 @@ Output: 0
 Explanation:
 
 No 1s are present in nums, thus we return 0 */
-class Solution {
+public class  findMaxConsecutive_Ones{
     public int findMaxConsecutiveOnes(int[] nums) {
         int count = 0, res =0;
         for (int i=0;i<nums.length;i++){

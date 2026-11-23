@@ -20,7 +20,7 @@ Output: [8, -1, 1, 3, -1]
 Explanation: In the array, the next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1 , for 1 it is 3 and then for 3 there is no larger element on the right and hence -1.*/
 import java.util.*;
 
-public class NextGreaterElement {
+public class Next_Greater_Element_I_496{
 
     // Approach 1: Brute force. Time O(n^2), Space O(1) extra
     static int[] bruteForce(int[] arr) {
@@ -86,3 +86,4 @@ public class NextGreaterElement {
         sc.close();
     }
 }
+//https://claude.ai/share/d64bed1b-3622-49a4-9a13-4fa0fa56a483

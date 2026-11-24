@@ -38,7 +38,7 @@ public class Remove_K_Digits_402 {
         int i = 0;
         while (i < s.length() && s.charAt(i) == '0') i++;
         String res = s.substring(i);
-        return res.isEmpty() ? "0" : res;
+        return res.isEmpty() ? "0" : res; // akkade empty aa kada check chestunnam (diff from striver design )
     }
 
     // helper: is numeric string a smaller than b? (no leading zeros)

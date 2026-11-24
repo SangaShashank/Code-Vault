@@ -86,3 +86,4 @@ public class Next_Greater_Element_II_503 {
         sc.close();
     }
 }
+//https://claude.ai/share/317a07c1-4c2a-44fa-b70f-06de3b657746

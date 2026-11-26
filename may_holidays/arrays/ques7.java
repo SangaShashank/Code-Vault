@@ -34,10 +34,11 @@ public class ques7 {
                 else if(i==arr.length-1 && arr[i-1]!=1){ // end 
                     arr[i] = 1; n--; i = i+2;
                 }
-                else{ // anntey midlle 
-                    if(arr[i+1]!=1 && arr[i-1]!=1){
+                else if ((arr[i+1]!=1 && arr[i-1]!=1)){
                         arr[i] = 1; n--; i = i+2;
                     }
+                else{
+                    i++;
                 }
             }
             else{

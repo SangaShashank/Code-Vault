@@ -12,6 +12,7 @@ Example 2:
 
 Input: s = "axc", t = "ahbgdc"
 Output: false */
+// idey question array lo kuda unndi chudu okkasari 
 import java.util.*;
 public class ques7{
     public static void main(String args[]){

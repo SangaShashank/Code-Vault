@@ -5,7 +5,7 @@ Constraints: Exactly one solution exists. Cannot use same element twice.
 Follow-up: What if you need all pairs, not just indices? What if the array is sorted? */
 import java.util.*;
 
-public class ques3{
+public class two_Sum_1{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
@@ -31,7 +31,7 @@ public class ques3{
         }
     }
     public static void approach_2(int arr[], int k){
-       
+       //okavela sort lekapothey sort cheayli 
         int left = 0 , right = arr.length-1;
         while (left < right){
             if (arr[left] + arr[right] == k){

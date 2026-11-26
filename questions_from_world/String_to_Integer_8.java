@@ -83,3 +83,60 @@ Constraints:
 
 0 <= s.length <= 200
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'. */
+
+import java.util.*;
+
+public class String_to_Integer_8{
+
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+
+        System.out.println(app1(s));
+    }
+
+    // Approach 1: String Traversal
+
+    public static int app1(String s) {
+
+        int i = 0;
+        int sign = 1; // sign kosam 
+        long num = 0; // overflow kosam
+
+        // Step 1: Ignore leading spaces
+        while (i < s.length() && s.charAt(i) == ' ') {
+            i++;
+        }
+
+        // Step 2: Check sign
+        if (i < s.length() && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
+
+            if (s.charAt(i) == '-') {
+                sign = -1;
+            }
+
+            i++;
+        }
+
+        // Step 3: Convert digits
+        while (i < s.length() && Character.isDigit(s.charAt(i))) { // question said that 
+
+            num = num * 10 + (s.charAt(i) - '0'); // heart of the problem 
+
+            // Step 4: Check overflow
+            if (sign * num > Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
+            }
+
+            if (sign * num < Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
+            }
+
+            i++;
+        }
+
+        return (int) (sign * num);
+    }
+}

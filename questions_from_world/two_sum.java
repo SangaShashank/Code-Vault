@@ -20,6 +20,7 @@ Explanation:
 
 nums[1] + nums[5] = 3 + (-3) = 0 */
 //optimal 
+import java.util.*;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>(); // value -> index
@@ -28,7 +29,7 @@ class Solution {
             int partner = target - nums[i];
 
             if (map.containsKey(partner)) {          // step 2: check first
-                return new int[]{map.get(partner), i};
+                return new int[]{map.get(partner), i}; // 1st patner ee undali enduku anntey adey 1st vachidi kada (i ni chusi confuse avadu)
             }
             map.put(nums[i], i);                     // step 3: store after
         }

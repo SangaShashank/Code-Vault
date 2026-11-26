@@ -42,12 +42,12 @@ public class ques4 {
             res.append(s1.charAt(i)); res.append(s2.charAt(i));
 
         }
-        if(s1.length()>n){
+        if(s1.length()>n){ //remaining of s1
             
             res.append(s1.substring(n));
         }
         else if(s2.length()>n){
-            res.append(s2.substring(n));
+            res.append(s2.substring(n)); // remaining of s2 
         }
         System.out.print(res);
     }

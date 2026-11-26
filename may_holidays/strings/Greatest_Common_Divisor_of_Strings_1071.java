@@ -34,7 +34,7 @@ Constraints:
 
 1 <= str1.length, str2.length <= 1000*/ 
 import java.util.*;
-public class ques6 {
+public class Greatest_Common_Divisor_of_Strings_1071 {
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 = s.nextLine();
@@ -55,6 +55,7 @@ public class ques6 {
         }
         while(l>0){
             if(n%l == 0 && m%l == 0){ // anntey possiblity unndi 
+        //Why are we checking divisibility? If a string of length l constructs another string through repetition, its length must be divisible by l.
                 t = t.substring(0,l);
                 String k = t.repeat(n/l);
                 String j = t.repeat(m/l);

@@ -20,7 +20,7 @@ s and t consist only of lowercase English letters.
  
 
 Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code*/import java.util.*;
-public class ques9 {
+public class Is_Subsequence_392{
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
         String s1 = s.nextLine();
@@ -28,17 +28,19 @@ public class ques9 {
         int i=0 , j=0;
         boolean res = app_2(s1,s2,i,j);
         System.out.print(res);
-        while(i<s1.length()){
-            if(j == s2.length()){
-                System.out.print("true");
-                return;
+        while(i < s1.length() && j < s2.length()) {
+
+            if(s1.charAt(i) == s2.charAt(j)) {
+                i++; // increment only if i is found 
             }
-            if(s1.charAt(i)==(s2.charAt(j))){
-                i++; j++;
-            }
+
             j++;
         }
+
+        System.out.print(i == s1.length()); // show kosam 
     }
+    }
+    // ee method tappu annta -> do it later 
     public static boolean app_2(String s1,String s2 , int i, int j){
         if(j==s2.length()){
             return true;

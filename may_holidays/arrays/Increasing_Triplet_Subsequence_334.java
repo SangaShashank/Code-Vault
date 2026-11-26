@@ -20,7 +20,8 @@ Explanation: One of the valid triplet is (1, 4, 5), because nums[1] == 1 < nums[
 Constraints:
 
 1 <= nums.length <= 5 * 105
--231 <= nums[i] <= 231 - 1*/import java.util.*;
+-231 <= nums[i] <= 231 - 1*/
+import java.util.*;
 /*idhi moddalo logic annta public class ques8 {
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);

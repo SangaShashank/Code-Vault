@@ -49,7 +49,7 @@ public class ques1 {
 // ai approach 
 import java.util.*;
 
-public class ques1 {
+public class Find_Maximum_And_Minimum_In_Array{
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         String[] input = s.nextLine().split(" ");
@@ -106,3 +106,4 @@ public class ques1 {
         System.out.println("min = " + min + ", max = " + max);
     }
 }
+//https://claude.ai/share/218c6f50-37f5-4cb4-989f-c78b8fd394ee
